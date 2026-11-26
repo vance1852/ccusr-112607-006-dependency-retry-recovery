@@ -1,0 +1,6 @@
+{"at": 1, "kind": "request", "id": "d", "ingress": "N", "kind_class": "ordinary", "route": "check", "attempt": "t4"}
+{"at": 2, "kind": "result", "attempt": "t4", "observer": "N", "status": "client_cancelled"}
+{"at": 3, "kind": "result", "attempt": "t4", "observer": "carrier", "status": "provider_rejected"}
+{"at": 4, "kind": "capacity", "dependency": "cache", "inflight": 1}
+{"at": 6, "kind": "probe", "ingress": "S", "dependency": "carrier", "category": "ordinary", "version": 5, "attempt": "p3"}
+{"at": 7, "kind": "result", "attempt": "p3", "observer": "carrier", "version": 5, "status": "success", "category": "ordinary"}

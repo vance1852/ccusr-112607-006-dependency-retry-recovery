@@ -1,0 +1,14 @@
+{"at": 1, "kind": "request", "id": "a", "ingress": "N", "kind_class": "signed", "route": "issued", "attempt": "t1"}
+{"at": 2, "kind": "attempt_received", "attempt": "t1", "dependency": "carrier", "version": 5}
+{"at": 3, "kind": "result", "attempt": "t1", "observer": "N", "status": "upstream_timeout"}
+{"at": 4, "kind": "result", "attempt": "t1", "observer": "W", "status": "upstream_timeout"}
+{"at": 5, "kind": "result", "attempt": "t1", "observer": "carrier", "status": "processing"}
+{"at": 6, "kind": "request", "id": "b", "ingress": "W", "kind_class": "ordinary", "route": "check", "attempt": "t2"}
+{"at": 7, "kind": "probe", "ingress": "N", "dependency": "carrier", "category": "ordinary", "version": 5, "attempt": "p1"}
+{"at": 7, "kind": "probe", "ingress": "W", "dependency": "carrier", "category": "signed", "version": 5, "attempt": "p2"}
+{"at": 8, "kind": "result", "attempt": "p1", "observer": "carrier", "version": 5, "status": "success", "category": "ordinary"}
+{"at": 9, "kind": "dependency_version", "dependency": "carrier", "version": 6}
+{"at": 10, "kind": "result", "attempt": "t1", "observer": "carrier", "version": 5, "status": "success"}
+{"at": 11, "kind": "result", "attempt": "p2", "observer": "carrier", "version": 5, "status": "success", "category": "signed"}
+{"at": 12, "kind": "restart", "endpoint": "W"}
+{"at": 13, "kind": "request", "id": "c", "ingress": "S", "kind_class": "signed", "route": "issued", "attempt": "t3"}

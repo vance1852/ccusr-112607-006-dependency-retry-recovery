@@ -1,0 +1,44 @@
+{
+  "routes": {
+    "check": [
+      "gateway",
+      "carrier"
+    ],
+    "issued": [
+      "gateway",
+      "carrier",
+      "evidence"
+    ],
+    "cached": [
+      "gateway",
+      "cache"
+    ]
+  },
+  "scopes": {
+    "carrier": {
+      "version": 5,
+      "inflight": 4,
+      "retry_pool": 2,
+      "probe_slots": 1,
+      "failure_window": 10,
+      "required_categories": [
+        "ordinary",
+        "signed"
+      ]
+    },
+    "cache": {
+      "version": 2,
+      "inflight": 2,
+      "retry_pool": 0,
+      "probe_slots": 1
+    }
+  },
+  "fallback_routes": {
+    "ordinary": "cached"
+  },
+  "ingresses": [
+    "N",
+    "W",
+    "S"
+  ]
+}
